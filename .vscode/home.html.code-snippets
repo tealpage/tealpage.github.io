@@ -1,0 +1,119 @@
+{
+	// Place your 0.2 workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"0.2 Nav Bar" : {
+		"scope": "html",
+		"prefix": ".CustomNavBar",
+		"body": [
+			"<div class=\"NavBar-Section\" id=\"NavBar-Section\">",
+			"    <div class=\"NavBar-Button-Container\">",
+			"        <div class=\"NavBar-Button-Wrapper\">",
+			"            <a href=\"home.html\" title=\"Home\">Home</a>",
+			"        </div>",
+			"        <div class=\"NavBar-Button-Wrapper\">",
+			"            <a href=\"Contact.html\" title=\"Contact\">Contact</a>",
+			"        </div>",
+			"        <div class=\"NavBar-Button-Wrapper\">",
+			"            <a href=\"projects.html\" title=\"Projects\" >Projects</a>",
+			"        </div>",
+			"    </div>",
+        	"</div>"
+		
+		],
+		"description" : "default Nav Bar"
+
+	},
+
+	"0.2 Title Card" : {
+		"scope": "html",
+		"prefix": ".TitleCard",
+		"body": [
+			"<div class=\"TitleCard-Section\">",
+			"    <!-- Wrappers for the Title and also the Logo -->",
+			"    <div class=\"TitleCard-Title\">",
+			"        <img src=\"images/Logos/TealPageTitle.png\">",
+			"    </div>",
+			"    <div class=\"TitleCard-Logo\">",
+			"        <img src=\"images/beanlogos/MainLogo.png\">",
+			"    </div>",
+        	"</div>",
+		
+		],
+		"description" : "default Title Card"
+		
+	},
+
+	"0.2 Project Dropdown Button" :{ 
+		"scope": "html",
+		"prefix": ".Project",
+		"body": [
+			"<!-- The Button-Wrapper That creates a dropdown Menu -->",
+			"<div class=\"Projcet-DropDownButton\">",
+			"    <div class=\"Project-DropDownButton-LogoSpace\"></div>",
+			"    <div class=\"Project-DropDownButton-LogoSpace\"></div>",
+			"    <div class=\"Project-DropDownButton-Title\">",
+			"        <div class=\"Project-DropDownButton-Title-Text\">#BuildingThePage</div>",
+			"        <div class=\"Project-DropDownButton-Title-Arrow\">",
+			"            <img src=\"images/pictures/dropdown/DdpDownOrange.png\">",
+			"        </div>",
+			"    </div>",
+			"    <div class=\"Project-DropDownButton-LogoSpace\">",
+			"        <img src=\"images/beanlogos/StockBean.png\" alt=\"\">",
+			"    </div>",
+			"    <div class=\"Porject-DropdownButton-LogoSpace\"></div>",
+			"</div>",
+			"<!-- The Subcontainer that contain each sub menu  -->",
+            "<div class=\"Project-SubMenu-Wrapper\">",
+            "    <div class=\"Project-SubMenu-Entry-Wrapper\">",
+            "        <a href=\"\">1) Temporary Entry : </a>",
+            "    </div>",
+            "</div>",
+		
+		],
+		"description" : "Used to add a new project dropdown in the project page"
+	},
+
+	"0.2 Project Enty Title" :{ 
+		"scope": "html",
+		"prefix": ".EntryTitle",
+		"body": [
+
+		"    <div class=\"ProjectPage-Title-Container\">",
+        "        <div class=\"ProjectPage-Left-DummyContainer\">",
+        "            <div class=\"Flex-Container\">",
+        "                <div class=\"Entry-Title-Wrapper\">Concepts and Sketches</div>",
+        "            </div>",
+        "        </div>",
+        "        <div class=\"ProjectPage-Right-DummyContainer\">",
+        "            <div class=\"Flex-Container\">",
+        "                <div class=\"Entry-Date-Wrapper\">4/11/2022</div>",
+        "            </div>",
+        "        </div>",
+        "    </div>"
+		
+		],
+		"description" : "Used to add a Entry Title"
+	}
+
+	
+
+
+
+	
+		
+}

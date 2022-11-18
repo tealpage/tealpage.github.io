@@ -1,0 +1,569 @@
+/*master styles*/
+body {
+    margin: 0px;
+    font-family: century-gothic, sans-serif;
+    --DarkTeal: #185252ff;
+    --SharpOrange: #ff6600ff;
+    --LightOffWhite: #fcfbf5ff;
+    --TitleCardHeight: 150px;
+    --ProjectButtonHeight: 120px;
+    --NavBarHeight:1.2cm;
+    --HomeHeight: 10cm;
+
+    --EntryTitleHeight: 1.5cm;
+    color: var(--DarkTeal);
+}
+
+
+
+/*  TitleCard Styling */
+    
+    .TitleCard-Section{
+        width: 100%;
+        height: var(--TitleCardHeight);
+        display: grid;
+        grid-template-columns: 7fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .TitleCard-Title{
+        width: fit-content;
+    }
+
+    .TitleCard-Title img{
+        height: var(--TitleCardHeight);
+        width: 100%;
+        object-fit:scale-down
+        
+    }
+
+    .TitleCard-Logo{
+        height: var(--TitleCardHeight);
+        width: fit-content;
+    }
+
+    .TitleCard-Logo img{
+        height: 100%; 
+        /* padding-top: 40%; */
+        width: 100%;
+        object-fit: scale-down;
+    }
+    /* .TitleCard-Wrapper{
+    } */
+
+/* NavBar Styling */
+    .NavBar-Section{
+        height: var(--NavBarHeight);
+        width: 100%;
+        background-color: var(--DarkTeal);
+        align-items: center;
+        display: flex;
+    }
+
+    .NavBar-Button-Container{
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+    }
+
+    .NavBar-Button-Wrapper{
+        /* temporary sizes */
+        margin-left: 10px;
+        margin-right: 10px;
+        /* width: 2cm; */
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+
+        /* Styling */
+        font-size: 0.9em;
+        /* text-transform: uppercase; */
+        background-color: var(--DarkTeal);
+        transition-property: background-color;
+        transition: all 1s;
+        text-align: center;
+
+    }
+
+    .NavBar-Button-Wrapper a{
+        color:     var(--LightOffWhite);
+        text-decoration: none;
+        font-weight: normal;
+        transition: all 1s;
+        
+        transition-property: color;
+    }
+
+    /* Hover Over Buttons */
+
+        .NavBar-Button-Wrapper:hover{
+            background-color: var(--SharpOrange);
+        }
+
+        .NavBar-Button-Wrapper:hover a{
+            font-weight: bolder;
+        }
+
+        .NavBar-Button-Wrapper a::before {
+            display: flex;
+            content: attr(title);
+            font-weight: bold;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+    /* Active Link */
+        .NavBar-ActiveButton-Wrapper{
+            background-color: var(--SharpOrange) !important;
+        }
+
+        .NavBar-ActiveButton-Wrapper a{
+            font-weight: bold !important;
+        }
+    
+    /* Sticky Behaviours */
+        /* Using Code Template from W3 School */
+        .NavBar-StickyPadding {
+            padding: 16px;
+        }
+        /* unclear how this works */
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .NavBar-StickyNavBar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .NavBar-StickyNavBar + .NavBar-StickyPadding {
+            padding-top: 100cm;
+        }
+        /* unclear how this works */
+
+    /* NavBar for Porject Pages */
+        .NavBar-ProjectNavBar-Container {
+            height: var(--NavBarHeight);
+            width: 100%;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            align-items: center;
+        }
+        .ProjectNavBar-Left-DummyContainer .NavBar-Button-Container {
+            justify-content: left;
+        }
+
+        .ProjectNavBar-Right-DummyContainer .NavBar-Button-Container {
+            justify-content: right;
+            padding-left: 0px;
+            padding-right: 30px;
+        }
+
+        .ProjectNavBar-Title-Wrapper{
+            color: var(--LightOffWhite);
+            font-weight: bolder;
+        }
+
+        .ProjectNavBar-Title-Wrapper::before{
+            content: ":";
+        }
+
+
+        .ProjectNavBar-Right-DummyContainer .NavBar-Button-Wrapper:hover {
+            background-color: var(--LightOffWhite);
+        }
+
+        .ProjectNavBar-Right-DummyContainer .NavBar-Button-Wrapper:hover a{
+            color: var(--DarkTeal);
+        }
+
+        .ProjectNavBar-Right-DummyContainer .NavBar-ActiveButton-Wrapper a {
+            color: var(--LightOffWhite) !important;
+        }
+
+
+    
+
+/* Project Styling */
+    /* Project Button Styling */
+        .Main-Section{
+            font-family: century-gothic, sans-serif;
+        }
+
+        .Main-Section-Sticky {
+            margin-top: 1.2cm ;
+        }
+
+        .Projcet-DropDownButton {
+            height: var(--ProjectButtonHeight);
+            width: 100%;
+            display:grid;
+
+            grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
+
+            background-color:     var(--LightOffWhite);
+            font-size: xx-large;
+            font-weight: bolder;
+            color: var(--DarkTeal);
+            text-align: center;
+            justify-content: center;
+
+            transition: 1s;
+        }
+
+        .Project-DropDownButton-LogoSpace img{
+            height: var(--ProjectButtonHeight);
+            width: 100%;
+            object-fit: scale-down;
+        }
+
+        .Project-DropDownButton-Title{
+            height: var(--ProjectButtonHeight);
+            display: grid;
+            grid-template-rows: 3fr 1fr;        
+            vertical-align:middle;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .Project-DropDownButton-Title-Text{
+            padding: 20px;
+
+        }
+        .Project-DropDownButton-Title-Arrow img{
+            height: 10px;
+            width: 100%;
+            padding-bottom: 20px;
+            object-fit:contain;
+            transition: 1s;
+        }
+
+        
+
+        /* Dropdown Button Hover Styles */
+            .Projcet-DropDownButton:hover {
+                background-color: var(--SharpOrange);
+                color:     var(--LightOffWhite);
+            }
+
+            .Projcet-DropDownButton:hover .Project-DropDownButton-Title-Arrow img{
+                filter: brightness(0) invert(1);
+            }
+
+        /* Active Button Styles */
+            .Project-ActiveDropDownButton {
+                background-color: var(--SharpOrange);
+                color:     var(--LightOffWhite);
+            }
+
+
+    /* Project SubMenu Objects */
+        .Project-SubMenu-Wrapper{
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .Project-SubMenu-Entry-Wrapper {
+            display: grid;
+            grid-template-columns: 1fr ;
+            width: 100%;
+            transition-property: background-color;
+            transition: all 1s;
+        }        
+            
+
+        .Project-SubMenu-Entry-Wrapper a{
+            padding: 10px;
+            font-size: 0.5cm;
+            justify-content: center;
+            text-align: center;
+            color: var(--DarkTeal);
+            text-decoration: none;
+            background-color: white;
+            transition-property: background-color;
+            transition: all 1s;
+        }
+
+        .Project-SubMenu-Entry-Wrapper a:hover{
+            filter: brightness(0.95);
+        }
+
+/* Entry-Page */
+    /* Entry Title Styles */
+        .ProjectPage-Title-Container{
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+        }
+
+        .Flex-Container{
+            padding: 30px;
+        }
+        
+        
+
+        .ProjectPage-Right-DummyContainer .Flex-Container {
+            display: flex;
+            justify-content: right;
+            align-items: flex-end;
+            height: var(--EntryTitleHeight);
+        }
+
+        .ProjectPage-Right-DummyContainer .Flex-Container::before {
+            content: "Date :";
+            padding-right: 10px;
+            
+        }
+     
+
+        .Entry-Title-Wrapper{
+            font-weight: bolder;
+            font-size: var(--EntryTitleHeight);
+        }
+
+    /* Entry Text Styles */
+
+    .Entry-TextBody-Container{
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 10px;
+        color: black;
+        text-align: justify;
+        line-height: 0.75cm;
+    }
+
+    .Entry-TextBody-Container p{
+        margin-bottom: 1cm;
+    }
+
+    .Entry-TextBody-Container p a{
+        text-decoration:none;
+        font-weight: bolder;
+        color: var(--SharpOrange);
+    }
+    .Entry-TextBody-Container p a::before{
+        content: "@";
+    }
+
+
+
+    /* .Entry-TextBody-Container p::before{
+        content: "";
+        padding-left: 1.5cm;
+    } */
+
+  
+/* Contact Page Styles */
+    .Contact-Section .Main-Section{
+        background-image: url(images/pictures/Background/ContactArrow.png);
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+
+    }
+    /* .contact-Section{
+        position: relative;
+    } 
+
+    .Contact-Background-Wrapper{
+        position: absolute;
+        top: var(--TitleCardHeight)+var(--NavBarHeight);
+    } */
+
+    .Contact-Background-Wrapper img{
+        height: min-content;
+        width: 100%;
+        object-fit: scale-down;
+    }
+    
+    .Entry-Text_DummyContainer{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding-left: 50px;
+        padding-right: 30px;
+        font-size: large;
+        text-align: justify;
+        padding-bottom: 10px;
+        
+    }
+
+    .TextBody-LeftDummy a{
+        text-decoration: none;
+        color: var(--SharpOrange);
+    }
+
+    .TextBody-LeftDummy a::before{
+        content: "@";
+    }
+
+    .TextBody-LeftDummy li{
+        line-height: 0.75cm;
+    }
+
+/* Home Page Styles */
+    /* .Home-Section .Main-Section{
+        height: var(--HomeHeight);
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    } */
+
+    .Home-Section .Main-Section{
+        height: var(--HomeHeight);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* .Home-GridItem-Wrapper{
+        margin: 10px;
+        color: var(--LightOffWhite);
+    } */
+
+    .Home-Section a{
+        text-decoration: none;
+        color: var(--LightOffWhite);
+    }
+    
+
+    /* New Item Side
+        .Home-MainRight-Container{
+            display: grid;
+            grid-template-rows: 4fr 2fr;
+        }
+
+        .Home-MainRight-Container .Home-GridItem-Wrapper a{
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-size: 1cm;
+            font-weight: bolder;
+            background-color: var(--LightOffWhite);
+            color: var(--DarkTeal);
+
+        }
+        .Home-Button-Date{
+            font-weight: 100;
+            font-size: large;
+            color: var(--SharpOrange);
+        }*/
+
+        .Home-Version-Display{
+            justify-content: center;
+            align-items: end;
+            display: flex;
+        }
+
+        .Home-Version-Display img{
+            height: 1.5cm;
+            object-fit: scale-down;
+            padding-top: 1cm;
+        } 
+
+    
+    /* Slide Show Side */
+
+        .Home-SlideShow-OuterContainer{
+            display: grid;
+            grid-template-columns: 2fr 5fr;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 1.5cm;
+            background-image: url(images/pictures/Background/MainPageBGE.png);
+            color: var(--LightOffWhite);
+        }
+
+        .SlideShow-FixedLeft-Wrapper{
+            text-align: end;
+            
+        }
+
+
+        /* Changing Text Part of slide show */
+            .SlideShow-SSDisplay-Container{
+                display: grid;
+                grid-template-rows: 1fr 3fr 1fr ;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .SlideShow-SSDisplay-Container{
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .SlideShow-FadingTitles{
+                display: none;
+            }
+
+            .SlideShow-SSDisplay-Container a{
+                color: var(--LightOffWhite);
+                text-decoration: none;
+            }
+            
+            .SlideShow-Button{
+                justify-content: center;
+            }
+
+            .SlideShow-SSDisplay-Container .prev img {
+                height: 0.2cm;
+                object-fit: scale-down;
+                rotate: 180deg;
+            }
+
+            .SlideShow-SSDisplay-Container .next img {
+                height: 0.2cm;
+                object-fit: scale-down;
+            }
+
+
+
+        /* animations */
+            .fade{
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @keyframes fade{
+                from{opacity: .4;}
+                to {opacity: 1;}
+            }
+    /* BottomGrid Styles */
+        .Home-BottomGrid-Container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1cm;
+        }
+
+        .Home-BottomGrid-Wrapper{
+            margin: 50px;
+        }
+
+        .Home-BottomGrid-Wrapper:hover p{
+            opacity: 100;
+        }
+
+        .Home-BottomGrid-Wrapper a{
+            color: var(--DarkTeal);            
+        }
+        .Home-BottomGrid-Wrapper p{
+            color: var(--DarkTeal); 
+            font-size: small;
+            text-align: center;
+            opacity: 0;
+            transition:1s;
+        }
+
+        
+    
+
+    
+
+
+
+
