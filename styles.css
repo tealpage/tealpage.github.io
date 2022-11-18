@@ -367,9 +367,9 @@ body {
         text-align: center;
     }
 
-    .Entry-Images-Container p::before{
+    /* .Entry-Images-Container p::before{
         content: "Caption: ";
-    }
+    } */
 
 
     /* .Entry-TextBody-Container p::before{
