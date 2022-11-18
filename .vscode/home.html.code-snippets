@@ -108,7 +108,24 @@
 		
 		],
 		"description" : "Used to add a Entry Title"
-	}
+	},
+
+
+	"0.2 Entry Images" :{ 
+		"scope": "html",
+		"prefix": ".Images",
+		"body": [
+
+		"<div class=\"Entry-Images-Container\">",
+		"    <img src=\"images/projects/B Quant_x_OAF/B1/MLP_V4C2_LPG.png\" alt=\"\">",
+		"    <p>Example Results</p>",
+		"</div>"
+		
+		],
+		"description" : "Used to add an Image in an Entry"
+	},
+
+	
 
 	
 

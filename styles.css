@@ -333,6 +333,8 @@ body {
         color: black;
         text-align: justify;
         line-height: 0.75cm;
+        display: flex;
+        flex-direction: column;
     }
 
     .Entry-TextBody-Container p{
@@ -348,6 +350,26 @@ body {
         content: "@";
     }
 
+    .Entry-Images-Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1cm;
+        margin-top: 1cm;
+    }
+
+    .Entry-Images-Container img{
+        width: 60%;
+        object-fit: scale-down;
+    }
+    .Entry-Images-Container p{
+        text-align: center;
+    }
+
+    .Entry-Images-Container p::before{
+        content: "Caption: ";
+    }
 
 
     /* .Entry-TextBody-Container p::before{
