@@ -55,50 +55,51 @@
                     
             </div>
         </div>
+        <div class="Main-Section">
+            <div class="MainContent-Container">
 
-        <div class="MainContent-Container">
-
-            <div class="ProjectPage-Title-Container">
-                <div class="ProjectPage-Left-DummyContainer">
-                    <div class="Flex-Container">
-                        <div class="Entry-Title-Wrapper">Project with OAF</div>
+                <div class="ProjectPage-Title-Container">
+                    <div class="ProjectPage-Left-DummyContainer">
+                        <div class="Flex-Container">
+                            <div class="Entry-Title-Wrapper">Project with OAF</div>
+                        </div>
+                    </div>
+                    <div class="ProjectPage-Right-DummyContainer">
+                        <div class="Flex-Container">
+                            <div class="Entry-Date-Wrapper">8/11/2022</div>
+                        </div>
                     </div>
                 </div>
-                <div class="ProjectPage-Right-DummyContainer">
-                    <div class="Flex-Container">
-                        <div class="Entry-Date-Wrapper">8/11/2022</div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="Content-Container">
-                <div class="Entry-TextBody-Container">
-                    <div class="Entry-Images-Container">
-                        <img src="images/projects/B Quant_x_OAF/B1/ProjectMainBean.png" alt="NotFound">
+                <div class="Content-Container">
+                    <div class="Entry-TextBody-Container">
+                        <div class="Entry-Images-Container">
+                            <img src="images/projects/B Quant_x_OAF/B1/ProjectMainBean.png" alt="NotFound">
+                        </div>
+                        <h1>Background</h1>
+                            <p>A while back I was involved in a research project with the Oxford Alpha Fund’s Quant Division. Which included collecting and formulating data, conducting experiments, as well as writing up a full report in Latex. And this is the whole journey around this project! Do Keep in mind that most this was during term time (Oxford terms are very very cramped) so naturally this had have a limited scale and scope.</p>
+                            <p> So what exactly was I doing? I was on a team dealing with the Earning Accountment Premium (EAP), a well studied phenomena where a premium of sometimes up to 16% of certain stocks’ annual returns can be observed around a 2-day period around an announcement; and specifically coming up and back-testing  machine learning strategies.</p>
+                        <h1>Getting There</h1>
+                            <p> You would expect that everything is already available in a nice format and people would just jump into doing all the fancy machine learning stuff immediately. But that is not the case in reality. Sadly, for us a lot of work needs to be done before even getting anywhere close to even thinking about strategies, namely collecting and formatting the of data. There was many a hour of sitting in front of the universities Bloomberg terminal, downloading the data in csv files which was for me an surprisingly awkward process (being new to Bloomberg). </p>                            
+                            <p>Then comes processing the data. This might be things like normalising the data or making sure everything is in the correct datatype, as well as creating the features you need. If you look around you, you will find time and time again, you will find things that you'd expect to just work to fall apart because of the simplest things like having inconsistent date formats or inconsistent membership across different data sets; slowly being driven into insanity…  Ok this might be slightly exaggerated for dramatic effect but was indeed painful; often it was easier to manually fixed the cases in excel. But hey it was a learning curved and I definitely picked more python because of it, and things definitely became a lot easier once I have coded all the tools and created a standard workflow.</p>
+                        
+                        <h1>Stratergies!</h1>
+                            <p>With a functioning data set, we can move on to the exciting stuff; let’s talk machine learning (calling it ML like all the cool kids). First thing first, I assume you already know some basic knowledge about ML but if not it’s really nothing fancy, and doubly so in this project. By this point we have definitely spent more than half of the allocated time on all the processing so I’ve decided to stick with the good old simple neural network. In this case semi-deep supervised learning with ReLu activation quick and dirtily cobbled together using Scikit-Learn. As the old saying goes, there’s no point reinventing the wheel with pytorch or tensor flow (although might be fun to do so in the future with more time) especially if it works!</p>
+                            <p>ML alone doesn’t make a strategy but often just a fancy I/O Mapping. Obviously, the output would be returns but we still need to figure both the input and how to convert return to splitting up your money into different things to buy. For the former have a look at the existing literature on the EAP and looked at different feature sets. Whilst for the later we picked having the top 5 predicted performing stocks and weigh them proportional to their predicted performance.</p>
+                            <div class="Entry-Images-Container">
+                                <img src="images/projects/B Quant_x_OAF/B1/OAF1 dataframe example.png" alt="">
+                                <p>Example of Data Features</p>
+                            </div>
+                            <p>This was then back tested with not bad results for a monthly strategy. Adjusted for 5bps assumed combined costs the best of them achieving an annualised <b>Sharpe of 1.82, Mean Returns of 30.2%, and Max Draw Down of 15%</b> compared to the an evenly weighted S&P 500 Index performance of Sharpe 0.97, Mean Annual Returns of 13.9% and Max Draw Down of 27% over the same back test period of 10 years. (We will discuss the issues of this whole taken later, so hold your horses haha…)</p> 
+                            <div class="Entry-Images-Container">
+                                <img src="images/projects/B Quant_x_OAF/B1/MLP_V4C2_LPG.png" alt="">
+                                <p>Example Results (Blue: stratergy (5 bps) Red: Evenly weighted S&P 500)</p>
+                            </div>
+                        <h1>The Issues</h1>
+                            <p> As mentioned before this approach is not without its issues. Namely the risk of introducing hind sight and concerns over unquantified risks. As you might have spotted already, we experimented with different data-sets, backt-tested them to find the best strategy. However this is equivalent to manually selecting the best features and creates a risk of introducing hindsight in when implementing this strategy in the future. moreover, we have also discovered some unquantified risks when analyising our stratergy data. We have found that there is little correlation between the predicted and actual portfolio returns. This combined with often large portfolio weighting into certain individual stocks creates a risk that is not well quantified by our performance measurement metrics alone. There is also feedback from our sponsors that we need to be more aware the risk exposures of our strategy to certain risk premiums, and the presence of relatively high max draw-downs. </p>
+                            <p> in the next entry, We’ll discuss what is done to address these issues so do look-forward to it!</p>
+                            <p><b>Get In touch if you'd like the full report! Find contact details <a href="contact.html">Here</a>!</b></p>
                     </div>
-                    <h1>Background</h1>
-                        <p>A while back I was involved in a research project with the Oxford Alpha Fund’s Quant Division. Which included collecting and formulating data, conducting experiments, as well as writing up a full report in Latex. And this is the whole journey around this project! Do Keep in mind that most this was during term time (Oxford terms are very very cramped) so naturally this had have a limited scale and scope.</p>
-                        <p> So what exactly was I doing? I was on a team dealing with the Earning Accountment Premium (EAP), a well studied phenomena where a premium of sometimes up to 16% of certain stocks’ annual returns can be observed around a 2-day period around an announcement; and specifically coming up and back-testing  machine learning strategies.</p>
-                    <h1>Getting There</h1>
-                        <p> You would expect that everything is already available in a nice format and people would just jump into doing all the fancy machine learning stuff immediately. But that is not the case in reality. Sadly, for us a lot of work needs to be done before even getting anywhere close to even thinking about strategies, namely collecting and formatting the of data. There was many a hour of sitting in front of the universities Bloomberg terminal, downloading the data in csv files which was for me an surprisingly awkward process (being new to Bloomberg). </p>                            
-                        <p>Then comes processing the data. This might be things like normalising the data or making sure everything is in the correct datatype, as well as creating the features you need. If you look around you, you will find time and time again, you will find things that you'd expect to just work to fall apart because of the simplest things like having inconsistent date formats or inconsistent membership across different data sets; slowly being driven into insanity…  Ok this might be slightly exaggerated for dramatic effect but was indeed painful; often it was easier to manually fixed the cases in excel. But hey it was a learning curved and I definitely picked more python because of it, and things definitely became a lot easier once I have coded all the tools and created a standard workflow.</p>
-                    
-                    <h1>Stratergies!</h1>
-                        <p>With a functioning data set, we can move on to the exciting stuff; let’s talk machine learning (calling it ML like all the cool kids). First thing first, I assume you already know some basic knowledge about ML but if not it’s really nothing fancy, and doubly so in this project. By this point we have definitely spent more than half of the allocated time on all the processing so I’ve decided to stick with the good old simple neural network. In this case semi-deep supervised learning with ReLu activation quick and dirtily cobbled together using Scikit-Learn. As the old saying goes, there’s no point reinventing the wheel with pytorch or tensor flow (although might be fun to do so in the future with more time) especially if it works!</p>
-                        <p>ML alone doesn’t make a strategy but often just a fancy I/O Mapping. Obviously, the output would be returns but we still need to figure both the input and how to convert return to splitting up your money into different things to buy. For the former have a look at the existing literature on the EAP and looked at different feature sets. Whilst for the later we picked having the top 5 predicted performing stocks and weigh them proportional to their predicted performance.</p>
-                        <div class="Entry-Images-Container">
-                            <img src="images/projects/B Quant_x_OAF/B1/OAF1 dataframe example.png" alt="">
-                            <p>Example of Data Features</p>
-                        </div>
-                        <p>This was then back tested with not bad results for a monthly strategy. Adjusted for 5bps assumed combined costs the best of them achieving an annualised <b>Sharpe of 1.82, Mean Returns of 30.2%, and Max Draw Down of 15%</b> compared to the an evenly weighted S&P 500 Index performance of Sharpe 0.97, Mean Annual Returns of 13.9% and Max Draw Down of 27% over the same back test period of 10 years. (We will discuss the issues of this whole taken later, so hold your horses haha…)</p> 
-                        <div class="Entry-Images-Container">
-                            <img src="images/projects/B Quant_x_OAF/B1/MLP_V4C2_LPG.png" alt="">
-                            <p>Example Results (Blue: stratergy (5 bps) Red: Evenly weighted S&P 500)</p>
-                        </div>
-                    <h1>The Issues</h1>
-                        <p> As mentioned before this approach is not without its issues. Namely the risk of introducing hind sight and concerns over unquantified risks. As you might have spotted already, we experimented with different data-sets, backt-tested them to find the best strategy. However this is equivalent to manually selecting the best features and creates a risk of introducing hindsight in when implementing this strategy in the future. moreover, we have also discovered some unquantified risks when analyising our stratergy data. We have found that there is little correlation between the predicted and actual portfolio returns. This combined with often large portfolio weighting into certain individual stocks creates a risk that is not well quantified by our performance measurement metrics alone. There is also feedback from our sponsors that we need to be more aware the risk exposures of our strategy to certain risk premiums, and the presence of relatively high max draw-downs. </p>
-                        <p> in the next entry, We’ll discuss what is done to address these issues so do look-forward to it!</p>
-                        <p><b>Get In touch if you'd like the full report! Find contact details <a href="contact.html">Here</a>!</b></p>
                 </div>
             </div>
         </div>
