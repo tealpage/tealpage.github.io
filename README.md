@@ -1,1 +1,3 @@
-# tealpage test
+# thetealpage 
+hosting for the site 
+
