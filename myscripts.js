@@ -137,12 +137,22 @@ function CardUpdate(x){
 
 
 btn.onclick = function() {
-  modal.style.display = "block";
-  EnvelopeState += 1;
-  CardUpdate(0);
+  if (EnvelopeState==0) {
+    EnvelopeState += 1;
+    CardUpdate(0);
+    setTimeout(() => {modal.style.display = "block"},750)  
+  }
+  else {
+    EnvelopeState += 1;
+    CardUpdate(0);
+    modal.style.display = "block";
+  }
+  
+  
 }
 
 span.onclick = function(){
+
   modal.style.display = "none";
 }
 
