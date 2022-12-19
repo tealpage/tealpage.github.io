@@ -95,8 +95,11 @@ var mleft = document.getElementById("mleft");
 var mright = document.getElementById("mright");
 var CardFront = document.getElementById("Card-Front");
 var CardText = document.getElementById("Card-Text");
+var EnvelopeOpen = document.getElementById("Envelope-Open")
+var EnvelopeClosed = document.getElementById("Envelope-Closed")
 
 
+var EnvelopeState = 0
 var CardPos = 0
 CardUpdate(0)
 
@@ -106,6 +109,8 @@ function StepUp(x){
 
 function CardUpdate(x){
   if (CardPos>=1) {CardPos=1;} else if (CardPos<=0) {CardPos=0;}
+  if (EnvelopeState>=1) {EnvelopeState = 1} else if (EnvelopeState<=0) {EnvelopeState=0}
+  
   
   if (CardPos == 1) {
     mright.style.display="none";
@@ -125,11 +130,16 @@ function CardUpdate(x){
     CardFront.style.display="block";
     CardText.style.display="none";
   }
+
+  if (EnvelopeState==0) {EnvelopeClosed.style.display="block";EnvelopeOpen.style.display="none";}
+  else {EnvelopeClosed.style.display="none";EnvelopeOpen.style.display="block";}
 }
 
 
 btn.onclick = function() {
   modal.style.display = "block";
+  EnvelopeState += 1;
+  CardUpdate(0);
 }
 
 span.onclick = function(){

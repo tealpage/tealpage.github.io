@@ -672,6 +672,7 @@ body {
             justify-content: center;
             align-items: center;
             height: 2cm;
+            margin-bottom: 0.5cm;
         }
 
         .Envelope-Wrapper{
@@ -690,7 +691,27 @@ body {
             color: #decd87ff;
         }
         
-    
+        .Envelope-ImageContainer{
+            display: flex;
+            width: 30%;
+            justify-content: center;
+            align-items: center;
+            margin: 1cm;
+        }
+
+        .Envelope-ImageContainer .Envelope-Open{
+            object-fit: scale-down;
+            width: 100%;
+            display: none;
+        }
+
+        .Envelope-ImageContainer .Envelope-Closed{
+            object-fit: scale-down;
+            width: 100%;
+            display: block;
+        }
+        
+        
 
     
 
