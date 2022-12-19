@@ -84,3 +84,61 @@ function showSlides(n) {
 }
 
 setInterval(function(){showSlides(slideIndex+=1)},5000);
+
+
+// Christmas Card 2022
+
+var modal = document.getElementById("Modal-Container");
+var btn = document.getElementById("Envelope");
+var span = document.getElementsByClassName("close")[0];
+var mleft = document.getElementById("mleft");
+var mright = document.getElementById("mright");
+var CardFront = document.getElementById("Card-Front");
+var CardText = document.getElementById("Card-Text");
+
+
+var CardPos = 0
+CardUpdate(0)
+
+function StepUp(x){
+  CardUpdate(CardPos+=x)
+}
+
+function CardUpdate(x){
+  if (CardPos>=1) {CardPos=1;} else if (CardPos<=0) {CardPos=0;}
+  
+  if (CardPos == 1) {
+    mright.style.display="none";
+    mleft.style.display="block";
+    CardFront.style.display="none";
+    CardText.style.display="block";
+  }
+  else if (CardPos == 0){
+    mright.style.display="block";
+    mleft.style.display="none";
+    CardFront.style.display="block";
+    CardText.style.display="none";
+  }
+  else {
+    mright.style.display="block";
+    mleft.style.display="block";
+    CardFront.style.display="block";
+    CardText.style.display="none";
+  }
+}
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function(){
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

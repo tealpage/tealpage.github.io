@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRFHMG3BPE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BRFHMG3BPE');
+        </script>
+        <!-- End of Google tag -->
+        
+        <meta charset="utf-8" />
+        <title>TheTeaLPage</title>
+        <base href="../../">
+        <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/Logos/Icon.png" type="Icon.png" sizes="16x16">
+
+        <script src="myscripts.js" defer></script>
+        
+        <!--link, links two documents together in a coding sense-->
+        <!--Code Snippets allow presets-->
+    </head>
+    <body>
+        <div class="TitleCard-Section">
+            <!-- Wrappers for the Title and also the Logo -->
+            <div class="TitleCard-Title">
+                <img src="images/Logos/TealPageTitle.png">
+            </div>
+            <div class="TitleCard-Logo">
+                <img src="images/beanlogos/MainLogo.png">
+            </div>
+        </div>
+        <!-- class="NavBar-Section" -->
+        <div class="NavBar-Section" id="NavBar-Section">
+            <div class="NavBar-ProjectNavBar-Container">
+                <div class="ProjectNavBar-Left-DummyContainer">
+                    <div class="NavBar-Button-Container">
+                        <div class="NavBar-Button-Wrapper NavBar-ActiveButton-Wrapper">
+                            <a href="projects.html" title="Projects">#XMAS22</a>
+                        </div>
+                        <div class="ProjectNavBar-Title-Wrapper">
+                            Digital Christmas Cards
+                        </div>
+                    </div>
+                </div>
+                <div class="ProjectNavBar-Right-DummyContainer">
+                    <div class="NavBar-Button-Container">
+                        <!-- Next Button -->
+                        <div class="NavBar-Button-Wrapper" style="display: none;">
+                            <a href="projects.html" class="" title="Previous">Previous</a>
+                        </div>
+                        <!-- Home Button -->
+                        <div class="NavBar-Button-Wrapper NavBar-ActiveButton-Wrapper">
+                            <a href="projects.html" title="Back">Back</a>
+                        </div>
+                        <!-- previous Button -->
+                        <div class="NavBar-Button-Wrapper" style="display: none;">
+                            <a href="projectentries/A BuildingThePage/A2 SprintstoV02.html" class="" title="Next" >Next</a>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+
+        <div class="Main-Section">
+            <div class="ProjectPage-Title-Container">
+                <div class="ProjectPage-Left-DummyContainer">
+                    <div class="Flex-Container">
+                        <div class="Entry-Title-Wrapper CC22-Font"> To Leo:</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="Content-Container">
+                <div class="Entry-TextBody-Container CC22-Wrapper">
+                    <div class="Envelope-DummyContainer">
+                        <div class="placeHolder"></div>
+                        <div class="Envelope-Wrapper" id = "Envelope">
+                            <div class="Envelope">Open</div>
+                        </div>
+                        <div class="placeHolder"></div>
+                    </div>
+                    <div class="Modal-Container" id = "Modal-Container">
+                        <span class = "close">&times;</span>
+                        <div class="Modal-Wrapper">
+                            <div class="Modal-Button-Wrapper" onclick="StepUp(-1)">
+                                <div class="Modal-Button" id="mleft">&#10094;</div>
+                            </div>
+                            <div class="Modal-DummyContainer">
+                                <img class = "Card-Front fade" id = "Card-Front" src="CC22/F2724W/CC22 Vector Alt1.png" alt="Not-Found Front">
+                                <img class = "Card-Text fade" id = "Card-Text" src="CC22/F2724W/CC22 Leo.png" alt="Not-Found Text">
+                            </div>
+                            <div class="Modal-Button-Wrapper" onclick="StepUp(1)">
+                                <div class="Modal-Button" id="mright">&#10095;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
