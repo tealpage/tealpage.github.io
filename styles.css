@@ -626,12 +626,13 @@ body {
             font-weight: bold;
             margin-right: 5%;
             margin-top: 5%;
+            transition: all 0.5s;
 
         }
   
         .close:hover,
         .close:focus {
-            color: white;
+            color: #decd87ff;
             text-decoration: none;
             cursor: pointer;
         }
@@ -663,6 +664,7 @@ body {
             text-align: center;
             color: white;
             font-size: xx-large;
+            transition: all 0.5s ;
         } 
 
         .Envelope-DummyContainer{
@@ -685,6 +687,7 @@ body {
             height: 100%;
             align-items: center;
             transition: all 1s;
+            cursor: pointer;
         }
         .Envelope-Wrapper:hover{
             background-color: #b84242ff;
@@ -710,7 +713,14 @@ body {
             width: 100%;
             display: block;
         }
+
+        .Modal-Button-Wrapper{
+            cursor: pointer;
+        }
         
+        .Modal-Button-Wrapper:hover .Modal-Button{
+            color: #decd87ff;
+        }
         
 
     
